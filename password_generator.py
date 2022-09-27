@@ -8,11 +8,11 @@ def collector():
 	dict = {'uppercase alphabets': string.ascii_uppercase, 'lowercase alphabets': string.ascii_lowercase, 'decimal digits': string.digits, 'special characters': string.punctuation, 'whitespace': ' '}
 
 	for keys in dict:
-		reply = input(f"Want to include {keys} alphabets: ").lower()
-		if reply == 'y':
+		reply = input(f"Want to include {keys}: ").lower()
+		if reply in ('y', 'yes'):
 			included += dict[keys]
 			print("Included")
-		elif reply == 'n':
+		elif reply in ('n', 'no'):
 			print("Left")
 		else:
 			print("Invlaid input, left by default")
